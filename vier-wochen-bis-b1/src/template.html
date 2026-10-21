@@ -1,0 +1,1313 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vier Wochen bis B1</title>
+<meta name="description" content="Kostenloser 28-Tage-Lernplan für telc Deutsch B1: Wortschatz, Grammatik, Sprechen, Schreiben und 10 Übungstests mit automatischer Auswertung. Ihr Fortschritt bleibt in Ihrem Browser.">
+<meta name="theme-color" content="#0E5C5F">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230E5C5F'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-size='30' font-weight='700' fill='%23fff'%3EB1%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{
+  --ground:#EDF0EF; --paper:#FFFFFF; --paper-2:#F5F8F7;
+  --ink:#131C1A; --ink-soft:#5A6866; --ink-faint:#8A9793;
+  --rule:#D3DBD8; --rule-soft:#E3E9E7;
+  --accent:#0E5C5F; --accent-soft:#DCEAE9; --accent-ink:#0E5C5F; --on-accent:#FFFFFF;
+  --signal:#98600A; --signal-soft:#F5E9D2;
+  --warn:#8E3527; --warn-soft:#F7E4E0;
+  --shadow:0 1px 2px rgba(19,28,26,.07), 0 8px 24px -18px rgba(19,28,26,.22);
+  --d:'Archivo',system-ui,sans-serif;
+  --b:'Source Serif 4',Georgia,serif;
+  --m:'IBM Plex Mono',ui-monospace,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0F1614; --paper:#171F1D; --paper-2:#1D2725;
+    --ink:#E5ECE9; --ink-soft:#9BA9A5; --ink-faint:#77857F;
+    --rule:#2B3633; --rule-soft:#232D2B;
+    --accent:#5CB8B4; --accent-soft:#1B3634; --accent-ink:#7ACFC9; --on-accent:#0B1413;
+    --signal:#D9A24A; --signal-soft:#33291A;
+    --warn:#E0897A; --warn-soft:#331F1C;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -18px rgba(0,0,0,.8);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0F1614; --paper:#171F1D; --paper-2:#1D2725;
+  --ink:#E5ECE9; --ink-soft:#9BA9A5; --ink-faint:#77857F;
+  --rule:#2B3633; --rule-soft:#232D2B;
+  --accent:#5CB8B4; --accent-soft:#1B3634; --accent-ink:#7ACFC9; --on-accent:#0B1413;
+  --signal:#D9A24A; --signal-soft:#33291A;
+  --warn:#E0897A; --warn-soft:#331F1C;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -18px rgba(0,0,0,.8);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+img{max-width:100%}
+[hidden]{display:none!important}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--b);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--d);font-weight:600;line-height:1.18;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:var(--accent-ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.lbl{font-family:var(--m);font-size:10.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint)}
+.num{font-family:var(--m);font-variant-numeric:tabular-nums}
+
+/* ---------- masthead ---------- */
+header.mast{border-bottom:1px solid var(--rule);background:var(--paper)}
+.mast-in{display:flex;flex-wrap:wrap;gap:22px 32px;align-items:flex-end;justify-content:space-between;padding:26px 0 20px}
+.brand h1{font-size:clamp(26px,4.2vw,38px);letter-spacing:-.02em}
+.brand .sub{font-size:14.5px;color:var(--ink-soft);max-width:46ch;margin-top:6px}
+.gauges{display:flex;gap:10px;flex-wrap:wrap}
+.gauge{background:var(--paper-2);border:1px solid var(--rule-soft);padding:9px 14px 10px;min-width:96px}
+.gauge .v{font-family:var(--m);font-size:23px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.1;display:block}
+.gauge.hot .v{color:var(--signal)}
+.gauge .k{font-family:var(--m);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);display:block;margin-top:3px}
+.dates{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-end;padding:0 0 18px}
+.dfield{display:flex;flex-direction:column;gap:4px}
+.dfield input{font-family:var(--m);font-size:13.5px;padding:6px 9px;background:var(--paper-2);color:var(--ink);border:1px solid var(--rule);border-radius:0}
+.warnline{font-size:13.5px;color:var(--warn);align-self:flex-end;max-width:44ch}
+
+/* ---------- tabs ---------- */
+nav.tabs{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--rule)}
+.tabs-in{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.tabs-in::-webkit-scrollbar{display:none}
+.tab{background:none;border:none;border-bottom:2px solid transparent;padding:12px 15px;font-family:var(--d);font-size:14px;font-weight:500;color:var(--ink-soft);white-space:nowrap}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected="true"]{color:var(--accent-ink);border-bottom-color:var(--accent)}
+main{padding:34px 0 90px}
+.panel{display:flex;flex-direction:column;gap:30px}
+.intro{max-width:66ch;display:flex;flex-direction:column;gap:9px}
+.intro h2{font-size:clamp(20px,2.6vw,25px);letter-spacing:-.01em}
+.intro p{font-size:16px;color:var(--ink-soft)}
+
+/* ---------- plan ---------- */
+.week{display:flex;flex-direction:column;gap:0}
+.week-h{display:flex;align-items:baseline;gap:12px;padding:0 0 8px;border-bottom:2px solid var(--ink);margin-bottom:0}
+.week-h .wn{font-family:var(--m);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink)}
+.week-h .wt{font-family:var(--d);font-size:17px;font-weight:600}
+.week-h .wd{font-family:var(--m);font-size:11.5px;color:var(--ink-faint);margin-left:auto;white-space:nowrap}
+.day{border-bottom:1px solid var(--rule-soft);background:var(--paper);border-left:3px solid transparent}
+.day.today{background:var(--signal-soft);border-left-color:var(--signal)}
+.day-hd{display:flex;align-items:center;gap:14px;flex:1 1 auto;min-width:0;background:none;border:none;text-align:left;padding:11px 14px 11px 0}
+.day-row{display:flex;align-items:center}
+.day.done .day-hd .dfocus{color:var(--ink-faint);text-decoration:line-through;text-decoration-color:var(--rule)}
+.tick{flex:0 0 auto;width:21px;height:21px;margin-left:14px;border:1.5px solid var(--rule);background:var(--paper);display:grid;place-items:center;padding:0;border-radius:2px}
+.tick svg{width:13px;height:13px;opacity:0;stroke:var(--on-accent);stroke-width:2.6;fill:none}
+.day.done .tick,.prompt.done .tick{background:var(--accent);border-color:var(--accent)}
+.day.done .tick svg,.prompt.done .tick svg{opacity:1}
+.prompt .tick{margin-left:0}
+.dn{font-family:var(--m);font-size:12.5px;font-weight:600;color:var(--ink-faint);width:52px;flex:0 0 auto;font-variant-numeric:tabular-nums}
+.day.today .dn{color:var(--signal)}
+.dfocus{font-family:var(--d);font-size:14.5px;font-weight:500;flex:1 1 auto;min-width:0}
+.dmeta{font-family:var(--m);font-size:11px;color:var(--ink-faint);flex:0 0 auto;white-space:nowrap}
+.chev{flex:0 0 auto;width:14px;color:var(--ink-faint);transition:transform .15s}
+.day[data-open="1"] .chev{transform:rotate(90deg)}
+.day-bd{padding:2px 18px 18px 84px;display:flex;flex-direction:column;gap:11px}
+@media(max-width:640px){.day-bd{padding-left:18px}.day-hd{gap:10px}.dn{width:44px}.dmeta{white-space:normal;text-align:right;max-width:11ch;line-height:1.3}}
+.blk{display:grid;grid-template-columns:56px 1fr;gap:12px;align-items:baseline}
+.blk .bm{font-family:var(--m);font-size:11.5px;color:var(--accent-ink);font-weight:600;font-variant-numeric:tabular-nums;padding-top:2px}
+.blk .bl{display:block;font-family:var(--d);font-size:14px;font-weight:600}
+.blk .bd{display:block;font-size:14.5px;color:var(--ink-soft);margin-top:3px}
+.pend{display:grid;grid-template-columns:56px 1fr;gap:12px;border-top:1px dashed var(--rule);padding-top:10px;margin-top:2px}
+.pend .bm{font-family:var(--m);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--signal);font-weight:600}
+.pend .bd{font-size:14.5px;color:var(--ink-soft)}
+
+/* ---------- generic card / prose ---------- */
+.card{background:var(--paper);border:1px solid var(--rule-soft);padding:20px 22px;box-shadow:var(--shadow)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;align-items:start}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:14px;align-items:stretch}
+.stack{display:flex;flex-direction:column;gap:14px}
+.tacblock{background:var(--paper);border-left:3px solid var(--accent);padding:18px 22px}
+.tacblock h3{font-size:17px;margin-bottom:4px}
+.tacblock .lede{font-size:15px;color:var(--ink-soft);max-width:64ch;margin-bottom:12px}
+ul.ticks{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px;max-width:80ch}
+ul.ticks li{display:grid;grid-template-columns:14px minmax(0,1fr);gap:8px;font-size:15px;line-height:1.55}
+ul.ticks li::before{content:"";width:6px;height:6px;background:var(--accent);margin-top:9px;border-radius:50%}
+table.bud{border-collapse:collapse;font-family:var(--m);font-size:12.5px;margin-bottom:14px}
+table.bud td{padding:3px 0;border-bottom:1px solid var(--rule-soft)}
+table.bud td:last-child{text-align:right;padding-left:22px;color:var(--accent-ink);font-weight:600;font-variant-numeric:tabular-nums}
+
+/* ---------- vocab ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:var(--paper);border:1px solid var(--rule);padding:5px 11px;font-family:var(--d);font-size:12.5px;font-weight:500;color:var(--ink-soft);border-radius:999px}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.chip .cn{font-family:var(--m);font-size:10.5px;opacity:.7;margin-left:5px}
+.vbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.vbar .grp{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.btn{background:var(--paper);border:1px solid var(--rule);padding:7px 14px;font-family:var(--d);font-size:13px;font-weight:500}
+.btn:hover{border-color:var(--accent)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.warn{border-color:var(--warn);color:var(--warn)}
+.vlist{background:var(--paper);border:1px solid var(--rule-soft)}
+.vrow{display:grid;grid-template-columns:1fr 1fr;gap:4px 20px;padding:11px 16px;border-bottom:1px solid var(--rule-soft);align-items:baseline}
+.vrow:last-child{border-bottom:none}
+.vrow.ok{background:var(--accent-soft)}
+.vrow.again{background:var(--warn-soft)}
+.vde{font-family:var(--b);font-size:15.5px;font-weight:600}
+.ven{font-size:14px;color:var(--ink-soft)}
+.vex{grid-column:1/-1;font-size:14.5px;color:var(--ink-soft);font-style:italic}
+.vst{grid-column:1/-1;display:flex;gap:6px;margin-top:4px}
+.mini{font-family:var(--m);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;background:none;border:1px solid var(--rule);padding:3px 8px;color:var(--ink-faint)}
+.mini:hover{border-color:var(--accent);color:var(--accent-ink)}
+.mini[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.mini.rr[aria-pressed="true"]{background:var(--warn);border-color:var(--warn);color:var(--on-accent)}
+/* drill */
+.drill{background:var(--paper);border:1px solid var(--rule-soft);box-shadow:var(--shadow);padding:34px 26px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;min-height:280px;justify-content:center}
+.drill .dq{font-family:var(--m);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+.drill .front{font-family:var(--b);font-size:clamp(21px,3.4vw,30px);font-weight:600;line-height:1.25;max-width:26ch}
+.drill .back{display:flex;flex-direction:column;gap:9px;max-width:44ch}
+.drill .ben{font-family:var(--d);font-size:16px;color:var(--accent-ink);font-weight:500}
+.drill .bex{font-size:16px;font-style:italic;color:var(--ink-soft);line-height:1.5}
+.drill .acts{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.hidden{display:none!important}
+
+/* ---------- grammar ---------- */
+.gblock{background:var(--paper);border:1px solid var(--rule-soft)}
+.gblock+.gblock{margin-top:10px}
+.g-hd{display:flex;align-items:center;gap:12px;width:100%;background:none;border:none;text-align:left;padding:14px 18px}
+.g-hd h3{font-size:16px;flex:1 1 auto}
+.g-hd .gc{font-family:var(--m);font-size:11px;color:var(--ink-faint)}
+.g-bd{padding:0 18px 20px;display:flex;flex-direction:column;gap:16px}
+.gwhy{font-size:14.5px;color:var(--ink-soft);max-width:66ch;border-left:2px solid var(--accent);padding-left:12px}
+.gtable-wrap{overflow-x:auto}
+table.gt{border-collapse:collapse;width:100%;min-width:520px;font-size:14.5px}
+table.gt th{text-align:left;font-family:var(--m);font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;padding:0 12px 6px 0;border-bottom:1px solid var(--rule)}
+table.gt td{padding:8px 12px 8px 0;border-bottom:1px solid var(--rule-soft);vertical-align:top}
+table.gt td.f{font-family:var(--d);font-weight:600;white-space:nowrap}
+table.gt td.n{font-family:var(--m);font-size:12px;color:var(--accent-ink);white-space:nowrap}
+table.gt td.e{font-style:italic;color:var(--ink-soft)}
+.traps{background:var(--warn-soft);border-left:3px solid var(--warn);padding:13px 16px}
+.traps .lbl{color:var(--warn);margin-bottom:7px;display:block}
+.traps ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.traps li{font-size:14.5px;line-height:1.5}
+
+/* ---------- speaking / writing ---------- */
+.pgroup{margin-bottom:16px}
+.pgroup h4{font-family:var(--d);font-size:13px;font-weight:600;color:var(--accent-ink);margin-bottom:7px}
+.pgroup ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px}
+.pgroup li{font-size:15.5px;padding-left:13px;border-left:1px solid var(--rule);line-height:1.5}
+.timer{display:flex;flex-wrap:wrap;gap:12px;align-items:center;background:var(--paper);border:1px solid var(--rule-soft);padding:14px 18px}
+.tval{font-family:var(--m);font-size:30px;font-weight:600;font-variant-numeric:tabular-nums;min-width:104px}
+.tval.run{color:var(--signal)}
+.skel{width:100%;border-collapse:collapse;font-size:14.5px;min-width:560px}
+.skel th{text-align:left;font-family:var(--m);font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-faint);padding:0 14px 7px 0;border-bottom:1px solid var(--rule)}
+.skel td{padding:11px 14px 11px 0;border-bottom:1px solid var(--rule-soft);vertical-align:top}
+.skel td.s{font-family:var(--d);font-weight:600;white-space:nowrap}
+.skel td.x{font-style:italic}
+.skel td.nt{font-size:13.5px;color:var(--ink-faint)}
+.prompt{display:flex;gap:12px;align-items:flex-start;background:var(--paper);border:1px solid var(--rule-soft);padding:13px 16px}
+.prompt.done{opacity:.55}
+.prompt .pn{font-family:var(--m);font-size:12px;font-weight:600;color:var(--accent-ink);flex:0 0 auto;padding-top:2px}
+.prompt .pt{font-size:15px;flex:1 1 auto}
+
+/* ---------- exam ---------- */
+.subtest{background:var(--paper);border:1px solid var(--rule-soft);padding:16px 18px;display:flex;flex-direction:column;gap:9px}
+.subtest .top{display:flex;align-items:baseline;gap:12px;flex-wrap:nowrap;justify-content:space-between}
+.subtest h4{font-family:var(--d);font-size:16px;font-weight:600}
+.subtest .meta{display:block;font-family:var(--m);font-size:11.5px;color:var(--ink-faint);line-height:1.5}
+.subtest .pts{font-family:var(--m);font-size:18px;font-weight:600;color:var(--accent-ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.ptbar{height:6px;background:var(--rule-soft)}
+.ptbar i{display:block;height:100%;background:var(--accent)}
+.subtest .det{font-size:14.5px;color:var(--ink-soft)}
+.scoretab{width:100%;border-collapse:collapse;font-size:14px;min-width:640px}
+.scoretab th{font-family:var(--m);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);text-align:right;padding:0 8px 7px;border-bottom:1px solid var(--rule)}
+.scoretab th:first-child{text-align:left}
+.scoretab td{padding:8px;border-bottom:1px solid var(--rule-soft);text-align:right}
+.scoretab td:first-child{text-align:left;font-family:var(--d);font-weight:600}
+.scoretab input{width:62px;font-family:var(--m);font-size:13.5px;text-align:right;padding:5px 7px;background:var(--paper-2);color:var(--ink);border:1px solid var(--rule);border-radius:0;font-variant-numeric:tabular-nums}
+.scoretab td.tot{font-family:var(--m);font-weight:600;font-variant-numeric:tabular-nums}
+.pill{font-family:var(--m);font-size:10.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:3px 9px;border:1px solid currentColor}
+.pill.pass{color:var(--accent)}
+.pill.fail{color:var(--warn)}
+.pill.idle{color:var(--ink-faint)}
+.res{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.resitem{border:1px solid var(--rule-soft);background:var(--paper);padding:14px 16px;display:flex;flex-direction:column;gap:5px}
+.resitem .k{font-family:var(--m);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+.resitem .v{font-family:var(--m);font-size:22px;font-weight:600;font-variant-numeric:tabular-nums}
+.rsrc{display:flex;flex-direction:column;gap:5px;padding:15px 0;border-bottom:1px solid var(--rule-soft)}
+.rsrc h4{font-family:var(--d);font-size:15px;font-weight:600}
+.rsrc p{font-size:14.5px;color:var(--ink-soft);max-width:70ch}
+.rsrc a{font-family:var(--m);font-size:12.5px}
+.saveflag{position:fixed;right:14px;bottom:14px;font-family:var(--m);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:var(--ground);padding:6px 11px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:60}
+.saveflag.on{opacity:.85}
+/* ---------- Übungstests: grid ---------- */
+.testgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.testcard{background:var(--paper);border:1px solid var(--rule-soft);padding:16px 18px;display:flex;flex-direction:column;gap:10px}
+.testcard .tn{font-family:var(--m);font-size:11px;color:var(--ink-faint);letter-spacing:.08em;text-transform:uppercase}
+.testcard h4{font-size:16px;font-weight:600}
+.testcard .tth{font-size:13.5px;color:var(--ink-soft)}
+.scorepill{align-self:flex-start;font-family:var(--m);font-size:11px;font-weight:600;letter-spacing:.04em;padding:3px 9px;border:1px solid currentColor}
+.scorepill.idle{color:var(--ink-faint)}
+.scorepill.pass{color:var(--accent)}
+.scorepill.fail{color:var(--warn)}
+.testcard .btnrow{display:flex;gap:8px;margin-top:auto}
+
+/* ---------- Übungstests: runner ---------- */
+.examhead{display:flex;align-items:center;gap:14px;flex-wrap:wrap;position:sticky;top:53px;z-index:10;background:var(--paper);border:1px solid var(--rule-soft);padding:10px 16px;margin-bottom:-6px}
+.examhead .back{font-family:var(--d);font-size:13px;font-weight:600;background:none;border:none;color:var(--accent-ink);display:flex;align-items:center;gap:5px;padding:4px 2px}
+.examhead h3{font-size:15.5px;flex:1 1 auto;min-width:120px}
+.teil{display:flex;flex-direction:column;gap:14px;background:var(--paper);border:1px solid var(--rule-soft);padding:20px 22px}
+.teil .th{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--rule);padding-bottom:10px}
+.teil .th h3{font-size:16px}
+.teil .th .pts{font-family:var(--m);font-size:12px;color:var(--accent-ink);font-weight:600;margin-left:auto}
+.teil .task{font-size:14.5px;color:var(--ink-soft);max-width:70ch}
+.refgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;background:var(--paper-2);border:1px solid var(--rule-soft);padding:14px}
+.refcard{display:flex;gap:8px;font-size:13.5px;line-height:1.45}
+.refcard .rk{font-family:var(--m);font-weight:700;color:var(--accent-ink);flex:0 0 auto}
+.refcard .rh{font-weight:600;display:block}
+.itemblock{display:flex;flex-direction:column;gap:8px;padding:12px 0;border-bottom:1px solid var(--rule-soft)}
+.itemblock:last-child{border-bottom:none;padding-bottom:0}
+.itemblock .it{font-size:14.5px}
+.itemblock .it b{font-family:var(--m);color:var(--ink-faint);font-weight:600;margin-right:6px}
+.pickrow{display:flex;flex-wrap:wrap;gap:6px}
+.pickbtn{min-width:30px;height:30px;padding:0 8px;font-family:var(--m);font-size:12.5px;font-weight:600;background:var(--paper);border:1px solid var(--rule);color:var(--ink-soft)}
+.pickbtn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.pickbtn.xk{color:var(--warn);border-color:var(--warn)}
+.pickbtn.xk[aria-pressed="true"]{background:var(--warn);border-color:var(--warn);color:var(--on-accent)}
+.optrow{display:flex;flex-direction:column;gap:6px}
+.optbtn{text-align:left;background:var(--paper);border:1px solid var(--rule);padding:8px 12px;font-size:14.5px;display:flex;gap:8px}
+.optbtn b{font-family:var(--m);color:var(--ink-faint)}
+.optbtn[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.prose{font-size:15px;color:var(--ink-soft);line-height:1.7;max-width:74ch}
+.prose p+p{margin-top:12px}
+.gapsel{font-family:var(--m);font-size:13px;font-weight:600;color:var(--accent-ink);background:var(--accent-soft);border:1px solid var(--accent);border-radius:3px;padding:2px 4px;margin:0 2px}
+.poollegend{display:flex;flex-wrap:wrap;gap:6px 14px;background:var(--paper-2);border:1px solid var(--rule-soft);padding:12px 14px;font-family:var(--m);font-size:12.5px}
+.poollegend span b{color:var(--accent-ink);margin-right:4px}
+.examfoot{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.resultbox{background:var(--paper);border:1px solid var(--rule-soft);padding:20px 22px;display:flex;flex-direction:column;gap:16px}
+.resultbox .rtot{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.resultbox .rtot .v{font-family:var(--m);font-size:32px;font-weight:600}
+.reviewrow{display:grid;grid-template-columns:26px 1fr auto;gap:10px;font-size:13.5px;padding:6px 0;border-bottom:1px solid var(--rule-soft);align-items:baseline}
+.reviewrow .rn{font-family:var(--m);color:var(--ink-faint)}
+.reviewrow.ok{color:var(--ink)}
+.reviewrow.no .ans{color:var(--warn)}
+.reviewrow .corr{font-family:var(--m);color:var(--accent-ink)}
+
+/* ---------- Fortschritt ---------- */
+.kpirow{display:flex;gap:10px;flex-wrap:wrap}
+.meterrow{display:flex;flex-direction:column;gap:10px}
+.meter{display:grid;grid-template-columns:104px 1fr 48px;align-items:center;gap:10px}
+.meter .mlbl{font-size:13.5px;color:var(--ink-soft)}
+.mtrack{height:10px;background:var(--rule-soft);border-radius:0 5px 5px 0}
+.mfill{display:block;height:100%;background:var(--accent);border-radius:0 5px 5px 0}
+.meter .mval{font-family:var(--m);font-size:12.5px;color:var(--ink-faint);text-align:right;font-variant-numeric:tabular-nums}
+.barchart{display:flex;flex-direction:column;gap:9px}
+.barrow{display:grid;grid-template-columns:168px 1fr 52px;align-items:center;gap:10px}
+.barrow .brlabel{font-size:13.5px;color:var(--ink-soft);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.brtrack{height:14px;background:var(--accent-soft);border-radius:0 4px 4px 0}
+.brtrack.neutral{background:var(--rule-soft)}
+.brfill{display:block;height:100%;background:var(--accent);border-radius:0 4px 4px 0}
+.brfill.pass{background:var(--accent)}
+.brfill.fail{background:var(--warn)}
+.barrow .brval{font-family:var(--m);font-size:12.5px;color:var(--ink-faint);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.emptynote{font-size:14px;color:var(--ink-faint);font-style:italic;padding:8px 0}
+.tipRow{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.tipRow .btn{text-align:left;max-width:100%}
+@media (max-width:560px){.barrow{grid-template-columns:1fr;gap:4px}.barrow .brval{text-align:left}.meter{grid-template-columns:1fr}.meter .mval{text-align:left}}
+/* ---------- standalone additions ---------- */
+.themebtn{align-self:flex-end;font-size:12px;padding:6px 11px}
+.foot{border-top:1px solid var(--rule);background:var(--paper);padding:22px 0 60px;margin-top:10px}
+.foot p{font-size:13px;color:var(--ink-faint);max-width:90ch}
+.foot p+p{margin-top:6px}
+.backup{display:flex;flex-direction:column;gap:14px}
+.backup .btnrow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.backup .note{font-size:14px;color:var(--ink-soft);max-width:70ch}
+.backup .status{font-family:var(--m);font-size:12.5px;min-height:1.4em}
+.backup .status.ok{color:var(--accent-ink)}
+.backup .status.err{color:var(--warn)}
+.backup input[type=file]{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.backup details{font-size:14px;color:var(--ink-soft)}
+.backup summary{cursor:pointer;font-family:var(--d);font-weight:500}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header class="mast">
+  <div class="wrap">
+    <div class="mast-in">
+      <div class="brand">
+        <h1>Vier Wochen bis B1</h1>
+        <p class="sub">Ein Tagesplan für telc Deutsch B1, gebaut um einen 9-to-5-Job: 60 bis 90 Minuten werktags, zwei längere Tage am Wochenende, drei Generalproben.</p>
+      </div>
+      <div class="gauges" id="gauges"></div>
+    </div>
+    <div class="dates">
+      <label class="dfield"><span class="lbl">Start des Plans</span><input type="date" id="startDate"></label>
+      <label class="dfield"><span class="lbl">Prüfungstermin</span><input type="date" id="examDate"></label>
+      <p class="warnline" id="dateWarn"></p>
+      <p class="warnline" id="storeWarn" hidden></p>
+      <button class="btn themebtn" id="themeBtn" type="button" onclick="cycleTheme()" aria-label="Farbschema wechseln">Farbschema: Auto</button>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs"><div class="wrap"><div class="tabs-in" id="tabs" role="tablist"></div></div></nav>
+
+<main class="wrap"><div id="panels"></div></main>
+<footer class="foot"><div class="wrap">
+  <p>Inoffizielles Lernmaterial für die Prüfung telc Deutsch B1 — nicht von der telc gGmbH herausgegeben oder geprüft. Die zehn Übungstests sind eigene Nachbauten im telc-Format; prüfen Sie sich zusätzlich mit dem offiziellen Übungstest (Tab „Prüfung“).</p>
+  <p>Ihr Fortschritt wird ausschließlich in diesem Browser gespeichert (localStorage) und an keinen Server gesendet. Schriften werden von dieser Seite selbst ausgeliefert.</p>
+</div></footer>
+<div class="saveflag" id="saveflag" role="status" aria-live="polite">gespeichert</div>
+
+<script>
+const DATA = /*__DATA__*/;
+const C = DATA.content, VOCAB = DATA.vocab, GRAMMAR = DATA.grammar, EXAMS = DATA.exams;
+
+const WEEKS = [
+  {n:1, t:"Fundament und Diagnose"},
+  {n:2, t:"Sprachbausteine und Schreiben automatisieren"},
+  {n:3, t:"Sprechen und Tempo"},
+  {n:4, t:"Feinschliff und Taper"}
+];
+const GT = {
+  konnektoren:"Konnektoren", wortstellung:"Wortstellung", vergangenheit:"Vergangenheit",
+  kasus:"Kasus", praepositionen:"Präpositionen", verbpraeposition:"Verb + Präposition",
+  adjektivendungen:"Adjektivendungen", passiv_konjunktiv:"Passiv und Konjunktiv II",
+  reflexiv_infinitiv:"Reflexiv und zu-Infinitiv", relativsatz:"Relativsätze"
+};
+
+/* ---------------- state ----------------
+   Every visitor's progress lives in THEIR OWN browser (localStorage). Nothing is sent to a
+   server, so two people using the same site never see each other's data. A different browser or
+   device starts empty — Fortschritt → "Sichern & übertragen" exports/imports a backup file. */
+const APP_ID = "vier-wochen-bis-b1";
+const STORE_KEY = APP_ID + ":state:v1";
+const LEGACY_KEYS = ["b1hub"];                 /* key used by earlier builds */
+const THEME_KEY = APP_ID + ":theme";
+const DEF = {startDate:"", examDate:"", days:{}, words:{}, prompts:{}, mocks:{}, open:{}, tab:"plan",
+             examAns:{}, examBest:{}, examResult:{}, examOpen:null, lastExport:""};
+const clone = o => JSON.parse(JSON.stringify(o));
+let S = clone(DEF);
+let storageOk = true;
+
+const ISO_RE = /^\d{4}-\d{2}-\d{2}$/;
+/* Turn ANY parsed JSON (old save, imported file, hand-edited file) into a well-formed state. */
+function sanitizeState(raw){
+  const out = clone(DEF);
+  if(!raw || typeof raw!=="object" || Array.isArray(raw)) return out;
+  for(const k of Object.keys(DEF)){
+    const want = DEF[k], v = raw[k];
+    if(v===undefined) continue;
+    if(typeof want==="string"){ if(typeof v==="string") out[k]=v; }
+    else if(want===null){ if(v===null || typeof v==="string") out[k]=v; }
+    else if(v && typeof v==="object" && !Array.isArray(v)) out[k]=clone(v);
+  }
+  if(!ISO_RE.test(out.startDate)) out.startDate="";
+  if(!ISO_RE.test(out.examDate)) out.examDate="";
+  if(!TABS.some(x=>x[0]===out.tab)) out.tab="plan";
+  if(out.examOpen!==null && !EXAMS.some(e=>e.id===out.examOpen)) out.examOpen=null;
+  return out;
+}
+
+function todayISO(){ const d=new Date(); return new Date(d.getTime()-d.getTimezoneOffset()*6e4).toISOString().slice(0,10); }
+function readStore(){
+  try{
+    let r = localStorage.getItem(STORE_KEY);
+    if(!r) for(const k of LEGACY_KEYS){ r = localStorage.getItem(k); if(r) break; }
+    return r ? JSON.parse(r) : null;
+  }catch(e){ storageOk=false; return null; }
+}
+function loadLocal(){ S = sanitizeState(readStore()); }
+function saveLocal(){ try{ localStorage.setItem(STORE_KEY, JSON.stringify(S)); storageOk=true; }catch(e){ storageOk=false; } }
+function flag(){
+  const f=document.getElementById("saveflag");
+  f.textContent = storageOk ? "gespeichert" : "nicht gespeichert";
+  f.classList.add("on"); clearTimeout(flag.t); flag.t=setTimeout(()=>f.classList.remove("on"),storageOk?1100:3500);
+}
+function persist(){ saveLocal(); flag(); }
+/* progress changed in another tab of the same browser → follow it */
+window.addEventListener("storage", e=>{
+  if(e.key!==STORE_KEY) return;
+  S = sanitizeState(readStore()); initDates(); render();
+});
+
+/* ---------------- dates ---------------- */
+function parseISO(s){ if(!s) return null; const p=s.split("-").map(Number); if(p.length!==3||!p[0]) return null; return new Date(p[0],p[1]-1,p[2]); }
+function dayDate(n){ const st=parseISO(S.startDate); if(!st) return null; const d=new Date(st); d.setDate(d.getDate()+(n-1)); return d; }
+const WD=["So","Mo","Di","Mi","Do","Fr","Sa"];
+function fmt(d){ return WD[d.getDay()]+" "+String(d.getDate()).padStart(2,"0")+"."+String(d.getMonth()+1).padStart(2,"0"); }
+function dayNo(){ const st=parseISO(S.startDate); if(!st) return 0; const t=parseISO(todayISO());
+  return Math.floor((t-st)/864e5)+1; }
+function daysToExam(){ const e=parseISO(S.examDate); if(!e) return null; return Math.round((e-parseISO(todayISO()))/864e5); }
+
+/* ---------------- helpers ---------------- */
+const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const el = (t,c,h)=>{ const n=document.createElement(t); if(c)n.className=c; if(h!=null)n.innerHTML=h; return n; };
+const CHECK='<svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.4,12 13,4.5"/></svg>';
+const allWords = () => VOCAB.flatMap(t=>t.words.map((w,i)=>({...w, tid:t.id, key:t.id+"|"+i})));
+const dayMinutes = d => d.blocks.reduce((a,b)=>a+(b.min||0),0);
+
+/* ---------------- gauges ---------------- */
+function renderGauges(){
+  const g=document.getElementById("gauges");
+  const done=Object.values(S.days).filter(Boolean).length;
+  const wk=allWords(), ok=wk.filter(w=>S.words[w.key]==="ok").length;
+  const dte=daysToExam();
+  const items=[
+    {v: dte==null? "–" : (dte<0? "vorbei" : dte), k:"Tage bis zur Prüfung", hot: dte!=null && dte>=0 && dte<=7},
+    {v: done+"/28", k:"Tage erledigt"},
+    {v: ok+"/"+wk.length, k:"Karten sitzen"}
+  ];
+  g.innerHTML="";
+  items.forEach(i=>g.appendChild(el("div","gauge"+(i.hot?" hot":""),
+    '<span class="v">'+esc(i.v)+'</span><span class="k">'+esc(i.k)+'</span>')));
+  const w=document.getElementById("dateWarn"); const st=parseISO(S.startDate), ex=parseISO(S.examDate);
+  if(st&&ex){ const span=Math.round((ex-st)/864e5);
+    w.textContent = span<28 ? "Zwischen Start und Prüfung liegen nur "+span+" Tage. Kürzen Sie Woche 4 auf "+Math.max(1,span-21)+" Tage und behalten Sie Mock 3 und den Taper-Tag."
+      : span>34 ? "Sie haben "+span+" Tage — hängen Sie die zusätzlichen Tage als Wiederholung hinter Tag 21 an, nicht hinter Tag 28." : "";
+  } else w.textContent="";
+}
+
+/* ---------------- PLAN ---------------- */
+function planPanel(){
+  const p=el("section","panel");
+  p.appendChild(el("div","intro",
+    '<h2>28 Tage, an einen Arbeitstag angepasst</h2>'+
+    '<p>Werktags vier kurze Blöcke, am Wochenende die langen Einheiten und die Generalproben. Der Pendler-Hinweis unter jedem Tag ist für Bahn, Auto oder Küche gedacht — er ersetzt keinen Block, er verdoppelt die Kontaktzeit. Klicken Sie einen Tag an, um die Blöcke zu sehen, und das Kästchen, wenn er erledigt ist.</p>'));
+  const now=dayNo();
+  WEEKS.forEach(w=>{
+    const sec=el("div","week");
+    const days=C.plan.filter(d=>d.week===w.n);
+    const d1=dayDate(days[0].n), d2=dayDate(days[days.length-1].n);
+    sec.appendChild(el("div","week-h",
+      '<span class="wn">Woche '+w.n+'</span><span class="wt">'+esc(w.t)+'</span>'+
+      '<span class="wd">'+(d1?esc(fmt(d1)+" – "+fmt(d2)):"")+'</span>'));
+    days.forEach(d=>{
+      const isToday = d.n===now;
+      const done = !!S.days[d.n];
+      const open = S.open["d"+d.n] ?? isToday;
+      const row=el("div","day"+(isToday?" today":"")+(done?" done":""));
+      row.dataset.open = open?"1":"0";
+      const dd=dayDate(d.n);
+      const hd=el("button","day-hd");
+      hd.setAttribute("aria-expanded", open?"true":"false");
+      hd.innerHTML='<span class="dn">Tag '+d.n+'</span>'+
+        '<span class="dfocus">'+esc(d.focus)+'</span>'+
+        '<span class="dmeta">'+(dd?esc(fmt(dd))+" · ":"")+dayMinutes(d)+' Min'+(d.kind==="lang"?' · lang':'')+'</span>'+
+        '<span class="chev">▸</span>';
+      hd.onclick=()=>{ const o=row.dataset.open==="1"; S.open["d"+d.n]=!o; row.dataset.open=o?"0":"1";
+        hd.setAttribute("aria-expanded",o?"false":"true"); bd.classList.toggle("hidden",o); persist(); };
+      const tick=el("button","tick",CHECK);
+      tick.setAttribute("aria-label","Tag "+d.n+" als erledigt markieren");
+      tick.setAttribute("aria-pressed",done?"true":"false");
+      tick.onclick=e=>{ e.stopPropagation(); S.days[d.n]=!S.days[d.n];
+        row.classList.toggle("done",!!S.days[d.n]); tick.setAttribute("aria-pressed",S.days[d.n]?"true":"false");
+        renderGauges(); persist(); };
+      const bd=el("div","day-bd"+(open?"":" hidden"));
+      d.blocks.forEach(b=>bd.appendChild(el("div","blk",
+        '<span class="bm">'+(b.min?b.min+" Min":"—")+'</span>'+
+        '<span><span class="bl">'+esc(b.label)+'</span>'+(b.detail?'<span class="bd">'+esc(b.detail)+'</span>':'')+'</span>')));
+      if(d.pendler) bd.appendChild(el("div","pend",'<span class="bm">Pendler</span><span class="bd">'+esc(d.pendler)+'</span>'));
+      const shell=el("div","day-row");
+      shell.appendChild(tick); shell.appendChild(hd); hd.style.flex="1 1 auto";
+      row.appendChild(shell); row.appendChild(bd);
+      sec.appendChild(row);
+    });
+    p.appendChild(sec);
+  });
+  return p;
+}
+
+/* ---------------- WORTSCHATZ ---------------- */
+let vTheme="all", vMode="list", vOnlyWeak=false, drillQueue=[], drillIdx=0, drillShown=false;
+function vocabPanel(){
+  const p=el("section","panel");
+  p.appendChild(el("div","intro",
+    '<h2>420 Karten in 14 Themen</h2>'+
+    '<p>Die Themenfelder, aus denen telc B1 seine Texte, Hörszenen und Briefe baut. Nomen immer mit Artikel und Plural sprechen — «die Bewerbung, -en», nie «Bewerbung» allein. «Sitzt» und «nochmal» werden gespeichert, damit der Problemstapel in Woche 4 von selbst entsteht.</p>'+'<p class="lbl" style="letter-spacing:.06em">Plural: -en / -e = Endung · ¨-e = Umlaut plus Endung · - = keine Änderung · / = kein Plural · (Pl.) = nur Plural</p>'));
+
+  const chips=el("div","chips");
+  const mk=(id,label,count)=>{ const b=el("button","chip",esc(label)+(count!=null?'<span class="cn">'+count+'</span>':""));
+    b.setAttribute("aria-pressed", vTheme===id?"true":"false");
+    b.onclick=()=>{ vTheme=id; vMode="list"; render(); }; return b; };
+  chips.appendChild(mk("all","Alle Themen",VOCAB.reduce((a,t)=>a+t.words.length,0)));
+  VOCAB.forEach(t=>chips.appendChild(mk(t.id,t.title,t.words.length)));
+  p.appendChild(chips);
+
+  const words = (vTheme==="all"? allWords() : allWords().filter(w=>w.tid===vTheme));
+  const shown = vOnlyWeak ? words.filter(w=>S.words[w.key]!=="ok") : words;
+  const okN = words.filter(w=>S.words[w.key]==="ok").length;
+
+  const bar=el("div","vbar");
+  const g1=el("div","grp");
+  const bList=el("button","btn"+(vMode==="list"?" pri":""),"Liste");
+  bList.onclick=()=>{ vMode="list"; render(); };
+  const bDrill=el("button","btn"+(vMode==="drill"?" pri":""),"Karten üben");
+  bDrill.onclick=()=>{ startDrill(shown); };
+  const bWeak=el("button","btn"+(vOnlyWeak?" pri":""),"nur was fehlt");
+  bWeak.setAttribute("aria-pressed",vOnlyWeak?"true":"false");
+  bWeak.onclick=()=>{ vOnlyWeak=!vOnlyWeak; render(); };
+  g1.append(bList,bDrill,bWeak);
+  const g2=el("div","grp",'<span class="lbl">'+okN+" von "+words.length+" sitzen</span>");
+  bar.append(g1,g2); p.appendChild(bar);
+
+  if(vMode==="drill"){ p.appendChild(drillView()); return p; }
+
+  if(!shown.length){ p.appendChild(el("div","card","<p>Alle Karten in dieser Auswahl sitzen. Schalten Sie den Filter aus oder wechseln Sie das Thema.</p>")); return p; }
+  const list=el("div","vlist");
+  shown.forEach(w=>{
+    const st=S.words[w.key];
+    const r=el("div","vrow"+(st==="ok"?" ok":st==="again"?" again":""));
+    r.innerHTML='<span class="vde">'+esc(w.de)+'</span><span class="ven">'+esc(w.en)+'</span>'+
+      '<span class="vex">'+esc(w.ex)+'</span>';
+    const acts=el("div","vst");
+    const bo=el("button","mini","sitzt"); bo.setAttribute("aria-pressed",st==="ok"?"true":"false");
+    const ba=el("button","mini rr","nochmal"); ba.setAttribute("aria-pressed",st==="again"?"true":"false");
+    bo.onclick=()=>{ S.words[w.key]= st==="ok"? undefined : "ok"; persist(); render(); };
+    ba.onclick=()=>{ S.words[w.key]= st==="again"? undefined : "again"; persist(); render(); };
+    acts.append(bo,ba); r.appendChild(acts); list.appendChild(r);
+  });
+  p.appendChild(list);
+  return p;
+}
+function startDrill(words){
+  drillQueue = words.slice().sort(()=>Math.random()-0.5);
+  drillIdx=0; drillShown=false; vMode="drill"; render();
+}
+function drillView(){
+  const box=el("div","drill");
+  if(drillIdx>=drillQueue.length){
+    box.innerHTML='<p class="dq">Stapel durch</p><p class="front">Fertig.</p>';
+    const b=el("button","btn pri","Nochmal mischen"); b.onclick=()=>startDrill(drillQueue); box.appendChild(b);
+    const b2=el("button","btn","Zurück zur Liste"); b2.onclick=()=>{ vMode="list"; render(); }; box.appendChild(b2);
+    return box;
+  }
+  const w=drillQueue[drillIdx];
+  box.appendChild(el("p","dq",(drillIdx+1)+" von "+drillQueue.length+" · "+esc((VOCAB.find(t=>t.id===w.tid)||{}).title||"")));
+  box.appendChild(el("p","front",esc(w.de)));
+  if(!drillShown){
+    const b=el("button","btn pri","Umdrehen");
+    b.onclick=()=>{ drillShown=true; render(); };
+    box.appendChild(b);
+  } else {
+    box.appendChild(el("div","back",'<span class="ben">'+esc(w.en)+'</span><span class="bex">'+esc(w.ex)+'</span>'));
+    const acts=el("div","acts");
+    const bo=el("button","btn pri","Sitzt");
+    bo.onclick=()=>{ S.words[w.key]="ok"; persist(); drillIdx++; drillShown=false; render(); };
+    const ba=el("button","btn warn","Nochmal");
+    ba.onclick=()=>{ S.words[w.key]="again"; persist(); drillQueue.push(w); drillIdx++; drillShown=false; render(); };
+    acts.append(bo,ba); box.appendChild(acts);
+  }
+  const q=el("button","btn","Stapel beenden"); q.style.marginTop="8px";
+  q.onclick=()=>{ vMode="list"; render(); }; box.appendChild(q);
+  return box;
+}
+
+/* ---------------- GRAMMATIK ---------------- */
+function grammarPanel(){
+  const p=el("section","panel");
+  p.appendChild(el("div","intro",
+    '<h2>Nur die Grammatik, die Punkte bringt</h2>'+
+    '<p>In vier Wochen lässt sich nicht alles nachholen, also steht hier nur, was in Sprachbausteinen, im Brief und im Gespräch wirklich abgefragt wird — in der Reihenfolge des Tagesplans. Die roten Kästen sind die Fehler, die englischsprachige Lernende tatsächlich machen; die gehören in Ihre eigene Fehlerliste.</p>'));
+  GRAMMAR.forEach((b,i)=>{
+    const open = S.open["g"+b.id] ?? (i===0);
+    const wrap=el("div","gblock");
+    const hd=el("button","g-hd",'<h3>'+esc(GT[b.id]||b.title)+'</h3><span class="gc">'+b.rows.length+' Formen</span><span class="chev">▸</span>');
+    hd.setAttribute("aria-expanded",open?"true":"false");
+    const bd=el("div","g-bd"+(open?"":" hidden"));
+    hd.onclick=()=>{ const o=!bd.classList.contains("hidden"); bd.classList.toggle("hidden",o);
+      S.open["g"+b.id]=!o; hd.setAttribute("aria-expanded",o?"false":"true"); persist(); };
+    if(b.why) bd.appendChild(el("p","gwhy",esc(b.why)));
+    const tw=el("div","gtable-wrap");
+    let html='<table class="gt"><thead><tr><th>Form</th><th>Regel</th><th>Beispiel</th></tr></thead><tbody>';
+    b.rows.forEach(r=>{ html+='<tr><td class="f">'+esc(r.form)+'</td><td class="n">'+esc(r.note||"")+'</td><td class="e">'+esc(r.ex||"")+'</td></tr>'; });
+    html+='</tbody></table>';
+    tw.innerHTML=html; bd.appendChild(tw);
+    if(b.traps&&b.traps.length){
+      const t=el("div","traps",'<span class="lbl">Typische Fehler</span><ul>'+b.traps.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ul>');
+      bd.appendChild(t);
+    }
+    wrap.append(hd,bd); p.appendChild(wrap);
+  });
+  return p;
+}
+
+/* ---------------- SPRECHEN ---------------- */
+let tRemain=0, tTick=null;
+function speakPanel(){
+  const p=el("section","panel");
+  p.appendChild(el("div","intro",
+    '<h2>Die mündliche Prüfung ist die, an der man scheitert</h2>'+
+    '<p>75 Punkte, 60 Prozent Pflicht, keine Kompensation aus dem schriftlichen Teil. Der Trick ist kein größerer Wortschatz, sondern ein festes Gerüst pro Teil: dann müssen Sie im Prüfungsraum nur noch Inhalt einsetzen. Sprechen Sie alles hier laut und im Stehen — leises Mitlesen trainiert nichts.</p>'));
+
+  const tm=el("div","timer");
+  tm.innerHTML='<span class="lbl">Übungsuhr</span><span class="tval num" id="tval">00:00</span>';
+  [["Teil 1 · 3 Min",180],["Teil 2 · 6 Min",360],["Teil 3 · 3 Min",180],["Vorbereitung · 20 Min",1200]].forEach(([l,s])=>{
+    const b=el("button","btn",l); b.onclick=()=>startTimer(s); tm.appendChild(b);
+  });
+  const st=el("button","btn","Stop"); st.onclick=stopTimer; tm.appendChild(st);
+  p.appendChild(tm);
+
+  const grid=el("div","stack");
+  C.speaking.forEach(sec=>{
+    const c=el("div","tacblock");
+    c.appendChild(el("h3",null,esc(sec.name)+' <span class="lbl" style="margin-left:6px">'+esc(sec.min)+'</span>'));
+    c.appendChild(el("p","lede",esc(sec.lede)));
+    sec.groups.forEach(g=>{
+      c.appendChild(el("div","pgroup",'<h4>'+esc(g.h)+'</h4><ul>'+g.items.map(i=>'<li>'+esc(i)+'</li>').join("")+'</ul>'));
+    });
+    grid.appendChild(c);
+  });
+  p.appendChild(grid);
+  return p;
+}
+function startTimer(s){ stopTimer(); tRemain=s; paintTimer(true);
+  tTick=setInterval(()=>{ tRemain--; if(tRemain<=0){ stopTimer(); tRemain=0; paintTimer(false); } else paintTimer(true); },1000); }
+function stopTimer(){ if(tTick) clearInterval(tTick); tTick=null; paintTimer(false); }
+function paintTimer(run){ const n=document.getElementById("tval"); if(!n) return;
+  n.textContent=String(Math.floor(tRemain/60)).padStart(2,"0")+":"+String(tRemain%60).padStart(2,"0");
+  n.classList.toggle("run",!!run); }
+
+/* ---------------- SCHREIBEN ---------------- */
+function writePanel(){
+  const p=el("section","panel");
+  p.appendChild(el("div","intro",
+    '<h2>Ein Brief, 30 Minuten, 45 Punkte</h2>'+
+    '<p>Der berechenbarste Teil der Prüfung. Es gibt immer eine Situation und drei Leitpunkte, und es gibt immer dasselbe Gerüst. Wer das Gerüst im Kopf hat, verbringt die 30 Minuten mit Inhalt statt mit Struktur — und hat am Ende sechs Minuten für die Kontrolle übrig, in denen die eigentlichen Punkte liegen.</p>'));
+
+  const sk=el("div","card");
+  sk.appendChild(el("p","lbl","Das Gerüst"));
+  let h='<div style="overflow-x:auto;margin-top:10px"><table class="skel"><thead><tr><th>Baustein</th><th>formell (Sie)</th><th>informell (du)</th><th>Achtung</th></tr></thead><tbody>';
+  C.writing.skeleton.forEach(r=>{ h+='<tr><td class="s">'+esc(r.slot)+'</td><td class="x">'+esc(r.formal)+'</td><td class="x">'+esc(r.informal)+'</td><td class="nt">'+esc(r.note)+'</td></tr>'; });
+  h+='</tbody></table></div>';
+  sk.appendChild(el("div",null,h));
+  p.appendChild(sk);
+
+  const fn=el("div","grid2");
+  C.writing.functions.forEach(f=>{
+    fn.appendChild(el("div","card",'<div class="pgroup"><h4>'+esc(f.h)+'</h4><ul>'+f.items.map(i=>'<li>'+esc(i)+'</li>').join("")+'</ul></div>'));
+  });
+  p.appendChild(fn);
+
+  const cl=el("div","tacblock");
+  cl.appendChild(el("h3",null,"Die sechs Kontrollminuten"));
+  cl.appendChild(el("p","lede","In dieser Reihenfolge durchgehen, nicht querlesen. Genau diese zehn Punkte entscheiden über die formale Richtigkeit — ein Drittel der 45 Punkte."));
+  cl.appendChild(el("ul","ticks",C.writing.checklist.map(x=>"<li><span>"+esc(x)+"</span></li>").join("")));
+  p.appendChild(cl);
+
+  const pr=el("div","stack");
+  pr.appendChild(el("p","lbl","Acht Übungsaufgaben im telc-Format — abhaken, wenn geschrieben und korrigiert"));
+  C.writing.prompts.forEach((t,i)=>{
+    const done=!!S.prompts[i];
+    const row=el("div","prompt"+(done?" done":""));
+    const tick=el("button","tick",CHECK);
+    tick.setAttribute("aria-pressed",done?"true":"false");
+    tick.onclick=()=>{ S.prompts[i]=!S.prompts[i]; persist(); render(); };
+    row.appendChild(tick);
+    row.appendChild(el("span","pn",String(i+1)));
+    row.appendChild(el("span","pt",esc(t)));
+    pr.appendChild(row);
+  });
+  p.appendChild(pr);
+  return p;
+}
+
+/* ---------------- TAKTIK ---------------- */
+function tacticPanel(){
+  const p=el("section","panel");
+  p.appendChild(el("div","intro",
+    '<h2>Punkte, die man ohne besseres Deutsch gewinnt</h2>'+
+    '<p>Ein großer Teil der verlorenen Punkte in telc B1 ist kein Sprachproblem, sondern ein Verfahrensproblem: falsches Zeitbudget, an einer Höraufgabe hängen bleiben, einen Leitpunkt vergessen, den Antwortbogen zu spät ausfüllen. Das lässt sich in Tagen reparieren.</p>'));
+  C.tactics.forEach(t=>{
+    const c=el("div","tacblock");
+    c.id="tac-"+t.id;
+    c.appendChild(el("h3",null,esc(t.name)));
+    c.appendChild(el("p","lede",esc(t.lede)));
+    if(t.budget){
+      let h='<table class="bud"><tbody>';
+      t.budget.forEach(([a,b])=>h+='<tr><td>'+esc(a)+'</td><td>'+esc(b)+'</td></tr>');
+      h+='</tbody></table>'; c.appendChild(el("div",null,h));
+    }
+    c.appendChild(el("ul","ticks",t.tips.map(x=>"<li><span>"+esc(x)+"</span></li>").join("")));
+    p.appendChild(c);
+  });
+  return p;
+}
+
+/* ---------------- PRÜFUNG ---------------- */
+const SUBS=[["lv","Leseverstehen",75],["sb","Sprachbausteine",30],["hv","Hörverstehen",75],["sa","Schriftl. Ausdruck",45]];
+function examPanel(){
+  if(S.examOpen) return examRunnerView(S.examOpen);
+  const p=el("section","panel"), E=C.exam;
+  p.appendChild(el("div","intro",
+    '<h2>Woraus die Prüfung besteht und wo Ihre 60 Prozent liegen</h2>'+
+    '<p>225 Punkte schriftlich, 75 Punkte mündlich. Beide Teile müssen getrennt bestanden werden: 135 von 225 und 45 von 75. Ein glänzendes Leseverstehen rettet keinen durchgefallenen mündlichen Teil — deshalb steht Sprechen in diesem Plan ab Tag 2 jeden Tag drin.</p>'));
+
+  const grid=el("div","grid4");
+  E.written.forEach(s=>{
+    const c=el("div","subtest");
+    c.appendChild(el("div","top",'<h4>'+esc(s.name)+'</h4><span class="pts">'+s.pts+' P.</span>'));
+    c.appendChild(el("span","meta",esc(s.parts)+' · '+esc(s.items)+' · '+esc(s.time)));
+    c.appendChild(el("div","ptbar",'<i style="width:'+(s.pts/75*100)+'%"></i>'));
+    c.appendChild(el("p","det",esc(s.detail)));
+    grid.appendChild(c);
+  });
+  p.appendChild(grid);
+
+  const or=el("div","tacblock");
+  or.appendChild(el("h3",null,"Mündliche Prüfung · "+E.oral.pts+" Punkte"));
+  or.appendChild(el("p","lede",esc(E.oral.time)));
+  E.oral.parts.forEach(x=>or.appendChild(el("div","pgroup",
+    '<h4>'+esc(x.n)+' · '+esc(x.name)+' <span style="color:var(--ink-faint);font-family:var(--m);font-size:11px">'+esc(x.min)+'</span></h4>'+
+    '<ul><li>'+esc(x.detail)+'</li></ul>')));
+  or.appendChild(el("div","pgroup",'<h4>Bewertet wird</h4><ul>'+E.oral.criteria.map(c=>'<li>'+esc(c)+'</li>').join("")+'</ul>'));
+  p.appendChild(or);
+
+  /* practice tests */
+  const tg=el("div","card");
+  tg.appendChild(el("p","lbl","10 Übungstests — Leseverstehen und Sprachbausteine, 105 Punkte pro Test"));
+  tg.appendChild(el("p",null,'<span style="font-size:14.5px;color:var(--ink-soft);display:block;margin:8px 0 14px;max-width:70ch">Jeder Test deckt Teil 1–3 des Leseverstehens und beide Sprachbausteine-Teile ab — direkt am Bildschirm ausfüllbar, sofort ausgewertet. Hörverstehen und der Brief fehlen hier bewusst; die üben Sie in Sprechen, Schreiben und mit dem offiziellen Übungstest.</span>'));
+  const grid2=el("div","testgrid");
+  EXAMS.forEach((t,i)=>{
+    const best=S.examBest[t.id];
+    const c=el("div","testcard");
+    c.appendChild(el("span","tn","Test "+(i+1)));
+    c.appendChild(el("h4",null,esc(t.title)));
+    c.appendChild(el("span","tth",esc(t.theme)));
+    if(best&&best.pts!=null){
+      const pct=Math.round(best.pts/best.max*100);
+      c.appendChild(el("span","scorepill "+(pct>=60?"pass":"fail"),"beste Punktzahl "+best.pts+"/"+best.max+" · "+pct+"%"));
+    } else c.appendChild(el("span","scorepill idle","noch nicht versucht"));
+    const br=el("div","btnrow");
+    const bo=el("button","btn pri",(S.examAns[t.id]&&Object.keys(S.examAns[t.id]).length)?"Weiter":"Starten");
+    bo.onclick=()=>examOpenTest(t.id);
+    br.appendChild(bo);
+    c.appendChild(br);
+    grid2.appendChild(c);
+  });
+  tg.appendChild(grid2);
+  p.appendChild(tg);
+
+  /* mock tracker */
+  const mk=el("div","card");
+  mk.appendChild(el("p","lbl","Generalproben — Punkte aus Tag 13, Tag 20 und Tag 27 eintragen"));
+  mk.appendChild(el("p",null,'<span style="font-size:14.5px;color:var(--ink-soft);display:block;margin:8px 0 14px;max-width:66ch">Rechnen Sie in Prozent, nicht in rohen Punkten — sonst sieht das Hörverstehen mit seinen 75 Punkten immer schlimmer aus, als es ist. Interessant ist nicht die Gesamtzahl, sondern welcher Teil sich zwischen Mock 1 und Mock 3 bewegt hat.</span>'));
+  const tw=el("div"); tw.style.overflowX="auto";
+  let h='<table class="scoretab"><thead><tr><th>Prüfungsteil</th><th>max</th><th>Mock 1</th><th>Mock 2</th><th>Mock 3</th></tr></thead><tbody>';
+  SUBS.concat([["mp","Mündlich",75]]).forEach(([id,name,max])=>{
+    h+='<tr><td>'+esc(name)+'</td><td class="tot" style="color:var(--ink-faint)">'+max+'</td>';
+    [1,2,3].forEach(m=>{ const v=(S.mocks[m]||{})[id]; h+='<td><input type="number" min="0" max="'+max+'" data-m="'+m+'" data-s="'+id+'" value="'+(v??"")+'"></td>'; });
+    h+='</tr>';
+  });
+  h+='</tbody></table></div>';
+  tw.innerHTML=h; mk.appendChild(tw);
+  const res=el("div","res"); res.style.marginTop="18px"; res.id="mockres";
+  mk.appendChild(res);
+  p.appendChild(mk);
+  setTimeout(()=>{
+    mk.querySelectorAll("input").forEach(inp=>{
+      inp.oninput=()=>{ const m=inp.dataset.m, s=inp.dataset.s;
+        S.mocks[m]=S.mocks[m]||{};
+        const v=inp.value===""?undefined:Math.max(0,Number(inp.value));
+        S.mocks[m][s]=v; persist(); paintMocks(); };
+    });
+    paintMocks();
+  },0);
+
+  const ck=el("div","tacblock");
+  ck.appendChild(el("h3",null,"Prüfungstag — was in die Tasche gehört"));
+  ck.appendChild(el("p","lede","Am Vorabend packen, nicht am Morgen."));
+  ck.appendChild(el("ul","ticks",E.checklist.map(x=>"<li><span>"+esc(x)+"</span></li>").join("")));
+  p.appendChild(ck);
+
+  const rs=el("div","card");
+  rs.appendChild(el("p","lbl","Material — kostenlos, und in dieser Reihenfolge"));
+  C.resources.forEach(r=>rs.appendChild(el("div","rsrc",
+    '<h4>'+esc(r.name)+'</h4><p>'+esc(r.what)+'</p><a href="'+esc(r.url)+'" target="_blank" rel="noopener">'+esc(r.label)+'</a>')));
+  p.appendChild(rs);
+
+  const gr=el("div","card");
+  gr.appendChild(el("p","lbl","Noten"));
+  gr.appendChild(el("div",null,'<table class="bud" style="margin-top:8px"><tbody>'+
+    E.pass.grades.map(([a,b])=>'<tr><td>'+esc(a)+'</td><td>'+esc(b)+'</td></tr>').join("")+'</tbody></table>'));
+  gr.appendChild(el("p",null,'<span style="font-size:14px;color:var(--ink-faint);display:block;max-width:70ch">Die Punkteverteilung und die 60-Prozent-Grenze folgen dem Standardschlüssel für telc Deutsch B1. Prüfen Sie sie an Tag 1 gegen den Lösungsschlüssel im offiziellen Übungstest — dort steht der Schlüssel, der für Ihren Termin gilt.</span>'));
+  p.appendChild(gr);
+  return p;
+}
+function paintMocks(){
+  const box=document.getElementById("mockres"); if(!box) return;
+  box.innerHTML="";
+  [1,2,3].forEach(m=>{
+    const d=S.mocks[m]||{};
+    const has=SUBS.some(([id])=>d[id]!=null) || d.mp!=null;
+    const w=SUBS.reduce((a,[id])=>a+(d[id]||0),0);
+    const o=d.mp||0;
+    const wp=Math.round(w/225*100), op=Math.round(o/75*100);
+    const wPass=w>=135, oPass=o>=45;
+    const item=el("div","resitem");
+    item.innerHTML='<span class="k">Mock '+m+'</span>';
+    if(!has){ item.innerHTML+='<span class="v" style="color:var(--ink-faint)">–</span><span class="pill idle" style="align-self:flex-start">noch offen</span>'; }
+    else {
+      item.innerHTML+='<span class="v">'+w+'<span style="font-size:13px;color:var(--ink-faint)">/225 · '+wp+'%</span></span>'+
+        '<span style="display:flex;gap:6px;flex-wrap:wrap;margin-top:2px">'+
+        '<span class="pill '+(wPass?"pass":"fail")+'">schriftlich '+(wPass?"bestanden":(135-w)+" P. fehlen")+'</span>'+
+        '<span class="pill '+(d.mp==null?"idle":(oPass?"pass":"fail"))+'">mündlich '+(d.mp==null?"offen":(oPass?op+"%":(45-o)+" P. fehlen"))+'</span></span>';
+    }
+    box.appendChild(item);
+  });
+}
+
+/* ---------------- Übungstests: runner ---------------- */
+function examAnsFor(id){ S.examAns[id]=S.examAns[id]||{}; return S.examAns[id]; }
+function examOpenTest(id){ S.examOpen=id; persist(); render(); window.scrollTo({top:0,behavior:"instant"}); }
+function examClose(){ S.examOpen=null; persist(); render(); window.scrollTo({top:0,behavior:"instant"}); }
+function examReset(id){ S.examAns[id]={}; S.examResult[id]=false; persist(); render(); }
+function examPick(id,n,k){
+  if(S.examResult[id]) return;
+  const a=examAnsFor(id); a[String(n)]=k; persist(); render();
+}
+function examGapChange(id,n,val){
+  const a=examAnsFor(id); a[String(n)]=val||undefined; persist();
+}
+function scoreExam(t){
+  const ans=examAnsFor(t.id);
+  const section=(key,label,items,wt)=>{
+    const rows=items.map(x=>({n:x.n, corr:x.answer, your:ans[String(x.n)]||null}));
+    const ok=rows.filter(r=>r.your===r.corr).length;
+    return {key,label,rows,ok,total:rows.length,wt,pts:+(ok*wt).toFixed(1),maxpts:+(rows.length*wt).toFixed(1)};
+  };
+  const detail=[
+    section("lv1","Leseverstehen Teil 1",t.lv1.texts,5),
+    section("lv2","Leseverstehen Teil 2",t.lv2.questions,5),
+    section("lv3","Leseverstehen Teil 3",t.lv3.situations,2.5),
+    section("sb1","Sprachbausteine Teil 1",t.sb1.items,1.5),
+    section("sb2","Sprachbausteine Teil 2",t.sb2.items,1.5)
+  ];
+  const pts=+detail.reduce((a,d)=>a+d.pts,0).toFixed(1), max=detail.reduce((a,d)=>a+d.maxpts,0);
+  return {detail,pts,max};
+}
+function examSubmit(t){
+  const r=scoreExam(t);
+  const cur=S.examBest[t.id]||{};
+  if(cur.pts==null||r.pts>cur.pts) S.examBest[t.id]={pts:r.pts,max:r.max};
+  S.examResult[t.id]=true;
+  persist(); render();
+  setTimeout(()=>{ const n=document.getElementById("examresult"); if(n) n.scrollIntoView({behavior:"smooth",block:"start"}); },30);
+}
+function resultTag(cur,corr){
+  if(!cur) return '<span style="font-family:var(--m);font-size:12px;color:var(--warn)">nicht beantwortet · richtig wäre '+esc(corr)+'</span>';
+  if(cur===corr) return '<span style="font-family:var(--m);font-size:12px;color:var(--accent-ink);font-weight:700">✓ richtig</span>';
+  return '<span style="font-family:var(--m);font-size:12px;color:var(--warn)">✗ richtig wäre '+esc(corr)+'</span>';
+}
+function pickRow(id,n,letters,corr,submitted,cur){
+  const btns=letters.map(k=>{
+    const isCur=cur===k;
+    const ring=(submitted&&k===corr)?' style="outline:2px solid var(--accent);outline-offset:1px"':'';
+    return '<button type="button" class="pickbtn'+(k==="x"?" xk":"")+'" aria-pressed="'+(isCur?"true":"false")+'"'+(submitted?' disabled':'')+ring+
+      ' onclick="examPick(\''+id+'\','+n+',\''+k+'\')">'+k+'</button>';
+  }).join("");
+  return '<div class="pickrow">'+btns+'</div>'+(submitted?resultTag(cur,corr):"");
+}
+function optRow(id,n,opts,corr,submitted,cur){
+  const btns=Object.entries(opts).map(([k,txt])=>{
+    const isCur=cur===k;
+    const ring=(submitted&&k===corr)?'outline:2px solid var(--accent);outline-offset:1px;':'';
+    return '<button type="button" class="optbtn" aria-pressed="'+(isCur?"true":"false")+'"'+(submitted?' disabled':'')+' style="'+ring+'" onclick="examPick(\''+id+'\','+n+',\''+k+'\')"><b>'+k+'</b> '+esc(txt)+'</button>';
+  }).join("");
+  return '<div class="optrow">'+btns+'</div>'+(submitted?resultTag(cur,corr):"");
+}
+function proseHtml(body){
+  return body.split(/\n\n+/).map(pp=>"<p>"+esc(pp).replace(/\n/g,"<br>")+"</p>").join("");
+}
+/* body text containing [[n]] markers -> paragraphs with inline <select> gaps.
+   optsOf(n) must return an array of [key,text] pairs for that gap's options. */
+function gappedHtml(id,body,optsOf,ansMap,submitted){
+  const ans=examAnsFor(id);
+  return body.split(/\n\n+/).map(pp=>{
+    const parts=pp.split(/(\[\[\d+\]\])/g).map(seg=>{
+      const m=seg.match(/^\[\[(\d+)\]\]$/);
+      if(!m) return esc(seg).replace(/\n/g,"<br>");
+      const n=m[1], cur=ans[n]||"", opts=optsOf(n);
+      let html='<select class="gapsel" data-n="'+n+'" data-test="'+id+'"'+(submitted?' disabled':'')+'>'+
+        '<option value="">?</option>'+
+        opts.map(([k,txt])=>'<option value="'+k+'"'+(cur===k?' selected':'')+'>'+k+') '+esc(txt)+'</option>').join("")+'</select>';
+      if(submitted) html+='<br><span style="display:inline-block;margin:2px 0 6px">'+resultTag(cur,ansMap[n])+'</span>';
+      return html;
+    });
+    return "<p>"+parts.join("")+"</p>";
+  }).join("");
+}
+function wireGaps(container,id){
+  container.querySelectorAll("select.gapsel").forEach(sel=>{
+    sel.onchange=()=>examGapChange(id,sel.dataset.n,sel.value);
+  });
+}
+function examRunnerView(id){
+  const t=EXAMS.find(x=>x.id===id);
+  const ans=examAnsFor(id);
+  const submitted=!!S.examResult[id];
+  const p=el("section","panel");
+
+  const hd=el("div","examhead");
+  const back=el("button","back","‹ Zurück zu den Übungstests");
+  back.onclick=examClose;
+  hd.appendChild(back);
+  hd.appendChild(el("h3",null,esc(t.title)+" · "+esc(t.theme)));
+  const tm=el("div","timer");
+  tm.innerHTML='<span class="lbl">Zeit</span><span class="tval num" id="tval">00:00</span>';
+  const b45=el("button","btn","45 Min"); b45.onclick=()=>startTimer(2700);
+  const bstop=el("button","btn","Stop"); bstop.onclick=stopTimer;
+  tm.append(b45,bstop);
+  hd.appendChild(tm);
+  p.appendChild(hd);
+
+  /* Teil 1 */
+  { const c=el("div","teil");
+    c.appendChild(el("div","th",'<h3>Leseverstehen — Teil 1</h3><span class="pts">'+t.lv1.texts.length*5+' P.</span>'));
+    c.appendChild(el("p","task","Ordnen Sie jedem Text die passende Überschrift zu. Zwei Überschriften bleiben übrig."));
+    const rg=el("div","refgrid");
+    t.lv1.headings.forEach(h=>rg.appendChild(el("div","refcard",'<span class="rk">'+h.k+'</span><span>'+esc(h.t)+'</span>')));
+    c.appendChild(rg);
+    t.lv1.texts.forEach(x=>{
+      const ib=el("div","itemblock");
+      ib.appendChild(el("p","it",'<b>Text '+x.n+'</b>'+esc(x.body)));
+      ib.innerHTML+=pickRow(id,x.n,t.lv1.headings.map(h=>h.k),x.answer,submitted,ans[String(x.n)]);
+      c.appendChild(ib);
+    });
+    p.appendChild(c); }
+
+  /* Teil 2 */
+  { const c=el("div","teil");
+    c.appendChild(el("div","th",'<h3>Leseverstehen — Teil 2</h3><span class="pts">'+t.lv2.questions.length*5+' P.</span>'));
+    c.appendChild(el("h4",null,esc(t.lv2.headline)));
+    c.appendChild(el("div","prose",proseHtml(t.lv2.body)));
+    t.lv2.questions.forEach(x=>{
+      const ib=el("div","itemblock");
+      ib.appendChild(el("p","it",'<b>'+x.n+'</b>'+esc(x.q)));
+      ib.innerHTML+=optRow(id,x.n,x.opts,x.answer,submitted,ans[String(x.n)]);
+      c.appendChild(ib);
+    });
+    p.appendChild(c); }
+
+  /* Teil 3 */
+  { const c=el("div","teil");
+    c.appendChild(el("div","th",'<h3>Leseverstehen — Teil 3</h3><span class="pts">'+(t.lv3.situations.length*2.5)+' P.</span>'));
+    c.appendChild(el("p","task",esc(t.lv3.task)));
+    const rg=el("div","refgrid");
+    t.lv3.ads.forEach(a=>rg.appendChild(el("div","refcard",'<span class="rk">'+a.k+'</span><span><span class="rh">'+esc(a.headline)+'</span>'+esc(a.t)+'</span>')));
+    c.appendChild(rg);
+    const letters=t.lv3.ads.map(a=>a.k).concat(["x"]);
+    t.lv3.situations.forEach(x=>{
+      const ib=el("div","itemblock");
+      ib.appendChild(el("p","it",'<b>'+x.n+'</b>'+esc(x.t)));
+      ib.innerHTML+=pickRow(id,x.n,letters,x.answer,submitted,ans[String(x.n)]);
+      c.appendChild(ib);
+    });
+    p.appendChild(c); }
+
+  /* Sprachbausteine 1 */
+  { const c=el("div","teil");
+    c.appendChild(el("div","th",'<h3>Sprachbausteine — Teil 1</h3><span class="pts">'+(t.sb1.items.length*1.5)+' P.</span>'));
+    c.appendChild(el("p","task","Wählen Sie für jede Lücke die richtige Form."));
+    const ansMap={}; t.sb1.items.forEach(x=>ansMap[String(x.n)]=x.answer);
+    const box=el("div","prose");
+    box.innerHTML=gappedHtml(id,t.sb1.body,n=>{
+      const it=t.sb1.items.find(x=>String(x.n)===n); return Object.entries(it.opts);
+    },ansMap,submitted);
+    c.appendChild(box);
+    p.appendChild(c);
+    setTimeout(()=>wireGaps(box,id),0); }
+
+  /* Sprachbausteine 2 */
+  { const c=el("div","teil");
+    c.appendChild(el("div","th",'<h3>Sprachbausteine — Teil 2</h3><span class="pts">'+(t.sb2.items.length*1.5)+' P.</span>'));
+    c.appendChild(el("p","task","Wählen Sie für jede Lücke das passende Wort aus der Liste."));
+    const legend=el("div","poollegend");
+    t.sb2.options.forEach(o=>legend.appendChild(el("span",null,"<b>"+o.k+"</b>"+esc(o.t))));
+    c.appendChild(legend);
+    const pool=t.sb2.options.map(o=>[o.k,o.t]);
+    const ansMap2={}; t.sb2.items.forEach(x=>ansMap2[String(x.n)]=x.answer);
+    const box2=el("div","prose");
+    box2.innerHTML=gappedHtml(id,t.sb2.body,()=>pool,ansMap2,submitted);
+    c.appendChild(box2);
+    p.appendChild(c);
+    setTimeout(()=>wireGaps(box2,id),0); }
+
+  /* Schriftlicher Ausdruck — not auto-scored */
+  { const c=el("div","teil");
+    c.appendChild(el("div","th",'<h3>Schriftlicher Ausdruck</h3><span class="pts">im Kopf üben</span>'));
+    c.appendChild(el("p","task",esc(t.sa.situation)));
+    c.appendChild(el("ul","ticks",t.sa.points.map(x=>"<li><span>"+esc(x)+"</span></li>").join("")));
+    c.appendChild(el("p","task","Register: "+esc(t.sa.register)+" · Empfänger: "+esc(t.sa.addressee)+". Schreiben Sie den Brief separat und prüfen Sie ihn mit der Checkliste im Tab «Schreiben» — dieser Teil wird hier nicht automatisch bewertet."));
+    p.appendChild(c); }
+
+  const foot=el("div","examfoot");
+  if(!submitted){
+    const bs=el("button","btn pri","Auswerten"); bs.onclick=()=>examSubmit(t);
+    foot.appendChild(bs);
+  } else {
+    const br=el("button","btn","Neu versuchen"); br.onclick=()=>examReset(id);
+    foot.appendChild(br);
+  }
+  const brs=el("button","btn warn","Antworten zurücksetzen"); brs.onclick=()=>examReset(id);
+  if(!submitted) foot.appendChild(brs);
+  p.appendChild(foot);
+
+  if(submitted){
+    const r=scoreExam(t);
+    const box=el("div","resultbox"); box.id="examresult";
+    const pct=Math.round(r.pts/r.max*100);
+    box.innerHTML='<div class="rtot"><span class="v">'+r.pts+'<span style="font-size:15px;color:var(--ink-faint)">/'+r.max+'</span></span>'+
+      '<span class="pill '+(pct>=60?"pass":"fail")+'">'+pct+' % · '+(pct>=60?"über der 60-Prozent-Grenze":"unter der 60-Prozent-Grenze")+'</span></div>';
+    r.detail.forEach(d=>{
+      box.innerHTML+='<div><span class="lbl">'+esc(d.label)+' — '+d.ok+'/'+d.total+' richtig · '+d.pts+'/'+d.maxpts+' P.</span></div>';
+    });
+    p.appendChild(box);
+  }
+  return p;
+}
+
+/* ---------------- FORTSCHRITT ---------------- */
+function barrow(label,pct,opts){
+  opts=opts||{};
+  const trackCls = opts.status ? "brtrack neutral" : "brtrack";
+  const fillCls = opts.status ? "brfill "+(pct>=60?"pass":"fail") : "brfill";
+  return '<div class="barrow"><span class="brlabel" title="'+esc(label)+'">'+esc(label)+'</span>'+
+    '<div class="'+trackCls+'"><span class="'+fillCls+'" style="width:'+Math.max(0,Math.min(100,pct))+'%"></span></div>'+
+    '<span class="brval">'+pct+' %</span></div>';
+}
+function meterRow(label,pct,val){
+  return '<div class="meter"><span class="mlbl">'+esc(label)+'</span>'+
+    '<div class="mtrack"><span class="mfill" style="width:'+Math.max(0,Math.min(100,pct))+'%"></span></div>'+
+    '<span class="mval">'+esc(val)+'</span></div>';
+}
+function progressPanel(){
+  const p=el("section","panel");
+  p.appendChild(el("div","intro",
+    '<h2>Fortschritt</h2>'+
+    '<p>Eine Momentaufnahme aus den Daten, die Sie in den anderen Tabs schon eingegeben haben: erledigte Tage, sitzende Vokabeln und die Ergebnisse der Übungstests. Unten steht, wo sich weitere Zeit am meisten lohnt — und wie Sie Ihren Stand sichern.</p>'));
+
+  const wk=allWords();
+  const okN=wk.filter(w=>S.words[w.key]==="ok").length;
+  const doneDays=Object.values(S.days).filter(Boolean).length;
+  const attempted=EXAMS.filter(t=>S.examResult[t.id]);
+  const scored=attempted.map(t=>({t,r:scoreExam(t)}));
+  const avgPct = scored.length ? Math.round(scored.reduce((a,s)=>a+s.r.pts/s.r.max*100,0)/scored.length) : null;
+
+  const kpi=el("div","kpirow");
+  [
+    {v:doneDays+"/28", k:"Tage erledigt"},
+    {v:okN+"/"+wk.length, k:"Karten sitzen"},
+    {v:attempted.length+"/10", k:"Übungstests versucht"},
+    {v: avgPct==null? "–" : avgPct+" %", k:"Ø Ergebnis Übungstests"}
+  ].forEach(i=>kpi.appendChild(el("div","gauge",'<span class="v">'+esc(i.v)+'</span><span class="k">'+esc(i.k)+'</span>')));
+  p.appendChild(el("div","card",'<h3>Auf einen Blick</h3>'));
+  p.lastChild.appendChild(kpi);
+
+  // Wochenpensum
+  const wc=el("div","card",'<h3>Wochenpensum</h3><p class="lede">Erledigte Tage pro Woche, aus dem 28-Tage-Plan.</p>');
+  const mr=el("div","meterrow");
+  WEEKS.forEach((wk2,wi)=>{
+    const daysInWeek=[1,2,3,4,5,6,7].map(d=>wi*7+d);
+    const doneInWeek=daysInWeek.filter(n=>S.days[n]).length;
+    mr.innerHTML+=meterRow("Woche "+wk2.n, doneInWeek/7*100, doneInWeek+"/7");
+  });
+  wc.appendChild(mr);
+  p.appendChild(wc);
+
+  // Testergebnisse im Überblick
+  const tc=el("div","card",'<h3>Testergebnisse im Überblick</h3><p class="lede">Prozent pro Übungstest, in der Reihenfolge, in der die Tests im Prüfung-Tab stehen.</p>');
+  if(!attempted.length){
+    tc.appendChild(el("p","emptynote","Noch kein Übungstest abgeschlossen — im Tab „Prüfung“ unter „10 Übungstests“ starten."));
+  } else {
+    const bc=el("div","barchart");
+    EXAMS.forEach(t=>{
+      const s=scored.find(x=>x.t.id===t.id);
+      if(!s) return;
+      bc.innerHTML+=barrow(t.title, Math.round(s.r.pts/s.r.max*100), {status:true});
+    });
+    tc.appendChild(bc);
+  }
+  p.appendChild(tc);
+
+  // Sprachbausteine & Leseverstehen im Detail
+  const dc=el("div","card",'<h3>Sprachbausteine &amp; Leseverstehen im Detail</h3><p class="lede">Über alle versuchten Tests summiert, pro Teilbereich.</p>');
+  if(!scored.length){
+    dc.appendChild(el("p","emptynote","Noch keine Daten — sobald Sie einen Übungstest auswerten, erscheint hier die Aufschlüsselung nach Teilbereich."));
+  } else {
+    const keys=[["lv1","Leseverstehen Teil 1"],["lv2","Leseverstehen Teil 2"],["lv3","Leseverstehen Teil 3"],["sb1","Sprachbausteine Teil 1"],["sb2","Sprachbausteine Teil 2"]];
+    const sums={}; keys.forEach(([k])=>sums[k]={pts:0,max:0});
+    scored.forEach(s=>s.r.detail.forEach(d=>{ sums[d.key].pts+=d.pts; sums[d.key].max+=d.maxpts; }));
+    const bc=el("div","barchart");
+    keys.forEach(([k,label])=>{
+      const s=sums[k]; if(!s.max) return;
+      bc.innerHTML+=barrow(label, Math.round(s.pts/s.max*100), {status:true});
+    });
+    dc.appendChild(bc);
+  }
+  p.appendChild(dc);
+
+  // Wortschatz nach Thema
+  const vc=el("div","card",'<h3>Wortschatz nach Thema</h3><p class="lede">Anteil „sitzt“ pro Themenblock, schwächstes Thema zuerst.</p>');
+  const byTheme={};
+  wk.forEach(w=>{ byTheme[w.tid]=byTheme[w.tid]||{ok:0,total:0,title:""}; byTheme[w.tid].total++; if(S.words[w.key]==="ok") byTheme[w.tid].ok++; });
+  VOCAB.forEach(t=>{ if(byTheme[t.id]) byTheme[t.id].title=t.title; });
+  const themeRows=Object.keys(byTheme).map(id=>({id,...byTheme[id],pct:Math.round(byTheme[id].ok/byTheme[id].total*100)})).sort((a,b)=>a.pct-b.pct);
+  if(!wk.some(w=>S.words[w.key])){
+    vc.appendChild(el("p","emptynote","Noch keine Vokabel markiert — im Tab „Wortschatz“ Karten als „sitzt“ oder „noch mal“ kennzeichnen."));
+  } else {
+    const bc=el("div","barchart");
+    themeRows.forEach(t=>{ bc.innerHTML+=barrow(t.title, t.pct); });
+    vc.appendChild(bc);
+  }
+  p.appendChild(vc);
+
+  // Wo Sie als Nächstes üben sollten
+  const rc=el("div","tacblock",'<h3>Wo Sie als Nächstes üben sollten</h3>');
+  const tips=el("div","tipRow");
+  let anyTip=false;
+  if(themeRows.length && wk.some(w=>S.words[w.key])){
+    const weakest=themeRows[0];
+    if(weakest.pct<80){
+      anyTip=true;
+      const b=el("button","btn","Vokabeln „"+esc(weakest.title)+"“ üben ("+weakest.pct+" % sitzen)");
+      b.onclick=()=>{ vTheme=weakest.id; vMode="list"; S.tab="vokabeln"; persist(); render(); window.scrollTo({top:0,behavior:"instant"}); };
+      tips.appendChild(b);
+    }
+  }
+  if(scored.length){
+    const keys=[["lv1","Leseverstehen Teil 1","t-lv"],["lv2","Leseverstehen Teil 2","t-lv"],["lv3","Leseverstehen Teil 3","t-lv"],["sb1","Sprachbausteine Teil 1","t-sb"],["sb2","Sprachbausteine Teil 2","t-sb"]];
+    const sums={}; keys.forEach(([k])=>sums[k]={pts:0,max:0});
+    scored.forEach(s=>s.r.detail.forEach(d=>{ sums[d.key].pts+=d.pts; sums[d.key].max+=d.maxpts; }));
+    let weakest=null;
+    keys.forEach(([k,label,tac])=>{ const s=sums[k]; if(!s.max) return; const pct=s.pts/s.max*100;
+      if(!weakest || pct<weakest.pct) weakest={label,pct,tac}; });
+    if(weakest && weakest.pct<80){
+      anyTip=true;
+      const b=el("button","btn","Taktik zu „"+esc(weakest.label)+"“ lesen ("+Math.round(weakest.pct)+" %)");
+      b.onclick=()=>{ S.tab="taktik"; persist(); render();
+        setTimeout(()=>{ const n=document.getElementById("tac-"+weakest.tac); if(n) n.scrollIntoView({behavior:"smooth",block:"start"}); },30); };
+      tips.appendChild(b);
+    }
+  }
+  if(!anyTip){
+    tips.appendChild(el("p","emptynote", (wk.some(w=>S.words[w.key])||scored.length) ?
+      "Solide Werte in allen erfassten Bereichen — weiter im Plan bleiben." :
+      "Noch nicht genug Daten. Markieren Sie ein paar Vokabelkarten oder schließen Sie einen Übungstest ab, dann erscheinen hier konkrete Hinweise."));
+  }
+  rc.appendChild(tips);
+  p.appendChild(rc);
+
+  p.appendChild(backupCard());
+  return p;
+}
+
+/* ---------------- Sichern & übertragen ---------------- */
+function backupStatus(msg,kind){ const n=document.getElementById("bkStatus"); if(n){ n.textContent=msg; n.className="status "+(kind||""); } }
+function fmtISO(s){ return ISO_RE.test(s||"") ? s.split("-").reverse().join(".") : "noch nie"; }
+function backupCard(){
+  const c=el("div","card backup");
+  c.innerHTML=
+    '<h3>Sichern &amp; übertragen</h3>'+
+    '<p class="note">Ihr Fortschritt liegt nur in diesem Browser auf diesem Gerät. Andere Besucher dieser Seite sehen ihn nicht, und er wird an keinen Server gesendet. Löschen Sie die Website-Daten Ihres Browsers, ist er weg — laden Sie deshalb ab und zu eine Sicherung herunter. Mit derselben Datei können Sie den Stand auf einem anderen Gerät oder Browser wieder laden.</p>'+
+    '<p class="note"><span class="lbl">Letzte Sicherung</span>&nbsp; '+esc(fmtISO(S.lastExport))+'</p>'+
+    '<div class="btnrow">'+
+      '<button class="btn pri" type="button" onclick="doExport()">Sicherung herunterladen</button>'+
+      '<button class="btn" type="button" onclick="document.getElementById(\'bkFile\').click()">Sicherung laden …</button>'+
+      '<input type="file" id="bkFile" accept="application/json,.json" hidden onchange="doImport(this)">'+
+    '</div>'+
+    '<p class="note">„Sicherung laden“ ersetzt den aktuellen Stand in diesem Browser vollständig.</p>'+
+    '<div class="btnrow">'+
+      '<button class="btn warn" type="button" id="bkReset" onclick="doResetClick()">Fortschritt zurücksetzen</button>'+
+      '<button class="btn" type="button" id="bkCancel" onclick="cancelReset()" hidden>Abbrechen</button>'+
+    '</div>'+
+    '<p class="status" id="bkStatus" role="status" aria-live="polite"></p>'+
+    '<details><summary>Warum gibt es keine Konten oder Geräte-Synchronisierung?</summary>'+
+      '<p style="margin-top:8px;max-width:70ch">Diese Seite ist rein statisch gehostet — es gibt keinen Server und kein Login. Das hält sie kostenlos, schnell und privat, bedeutet aber: Der Stand wandert nicht von allein zwischen Geräten. Die Sicherungsdatei ist der Weg dafür.</p></details>';
+  return c;
+}
+function doExport(){
+  S.lastExport=todayISO(); persist();
+  const payload={app:APP_ID, version:1, exportedAt:new Date().toISOString(), state:S};
+  const blob=new Blob([JSON.stringify(payload,null,1)],{type:"application/json"});
+  const url=URL.createObjectURL(blob), name="b1-fortschritt-"+todayISO()+".json";
+  const a=document.createElement("a"); a.href=url; a.download=name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),4000);
+  render(); backupStatus("Sicherung „"+name+"“ wurde heruntergeladen.","ok");
+}
+async function doImport(input){
+  const f=input.files&&input.files[0]; input.value="";
+  if(!f) return;
+  if(f.size>2*1024*1024) return backupStatus("Diese Datei ist zu groß für eine Sicherung.","err");
+  let parsed;
+  try{ parsed=JSON.parse(await f.text()); }catch(e){ return backupStatus("Die Datei ist keine gültige JSON-Datei.","err"); }
+  if(!parsed || parsed.app!==APP_ID || !parsed.state || typeof parsed.state!=="object")
+    return backupStatus("Das ist keine Sicherung aus dieser Seite (Datei „b1-fortschritt-….json“ erwartet).","err");
+  S=sanitizeState(parsed.state); S.tab="fortschritt";
+  initDates(); persist(); render();
+  const days=Object.values(S.days).filter(Boolean).length, cards=Object.values(S.words).filter(v=>v==="ok").length;
+  backupStatus("Sicherung geladen: "+days+" Tage erledigt, "+cards+" Karten sitzen, "+EXAMS.filter(e=>S.examResult[e.id]).length+" Übungstests.","ok");
+}
+let resetArmed=false, resetTimer=null;
+function paintReset(){
+  const b=document.getElementById("bkReset"), c=document.getElementById("bkCancel"); if(!b||!c) return;
+  b.textContent=resetArmed?"Ja, alles löschen":"Fortschritt zurücksetzen"; c.hidden=!resetArmed;
+}
+function cancelReset(){ resetArmed=false; clearTimeout(resetTimer); paintReset(); }
+function doResetClick(){
+  if(!resetArmed){
+    resetArmed=true; paintReset(); backupStatus("Das löscht Tage, Karten, Testergebnisse und Daten in diesem Browser. Zum Bestätigen noch einmal klicken.","err");
+    clearTimeout(resetTimer); resetTimer=setTimeout(()=>{ resetArmed=false; paintReset(); backupStatus(""); },8000);
+    return;
+  }
+  resetArmed=false; clearTimeout(resetTimer);
+  S=clone(DEF); S.tab="fortschritt"; initDates(); persist(); render();
+  backupStatus("Alles zurückgesetzt.","ok");
+}
+
+/* ---------------- Farbschema ---------------- */
+const THEMES=[["auto","Auto"],["light","Hell"],["dark","Dunkel"]];
+function getTheme(){ try{ const v=localStorage.getItem(THEME_KEY); return THEMES.some(x=>x[0]===v)?v:"auto"; }catch(e){ return "auto"; } }
+function applyTheme(){
+  const m=getTheme(), r=document.documentElement;
+  if(m==="auto") r.removeAttribute("data-theme"); else r.setAttribute("data-theme",m);
+  const b=document.getElementById("themeBtn"); if(b) b.textContent="Farbschema: "+THEMES.find(x=>x[0]===m)[1];
+}
+function cycleTheme(){
+  const i=THEMES.findIndex(x=>x[0]===getTheme());
+  try{ localStorage.setItem(THEME_KEY,THEMES[(i+1)%THEMES.length][0]); }catch(e){}
+  applyTheme();
+}
+
+/* ---------------- shell ---------------- */
+const TABS=[["plan","28-Tage-Plan",planPanel],["vokabeln","Wortschatz",vocabPanel],["grammatik","Grammatik",grammarPanel],
+  ["sprechen","Sprechen",speakPanel],["schreiben","Schreiben",writePanel],["taktik","Taktik",tacticPanel],["pruefung","Prüfung",examPanel],
+  ["fortschritt","Fortschritt",progressPanel]];
+function render(){
+  const tb=document.getElementById("tabs"); tb.innerHTML="";
+  TABS.forEach(([id,label])=>{
+    const b=el("button","tab",esc(label));
+    b.setAttribute("role","tab"); b.setAttribute("aria-selected", S.tab===id?"true":"false");
+    b.onclick=()=>{ S.tab=id; persist(); render(); window.scrollTo({top:0,behavior:"instant"}); };
+    tb.appendChild(b);
+  });
+  const host=document.getElementById("panels"); host.innerHTML="";
+  const t=TABS.find(x=>x[0]===S.tab)||TABS[0];
+  host.appendChild(t[2]());
+  renderGauges();
+  const sw=document.getElementById("storeWarn");
+  sw.hidden=storageOk;
+  if(!storageOk) sw.textContent="Ihr Browser blockiert das Speichern (privates Fenster?). Der Fortschritt geht beim Schließen verloren — sichern Sie ihn im Tab „Fortschritt“ als Datei.";
+}
+function initDates(){
+  if(!S.startDate) S.startDate=todayISO();
+  if(!S.examDate){ const d=parseISO(S.startDate); d.setDate(d.getDate()+28); S.examDate=new Date(d.getTime()-d.getTimezoneOffset()*6e4).toISOString().slice(0,10); }
+  const sd=document.getElementById("startDate"), ed=document.getElementById("examDate");
+  sd.value=S.startDate; ed.value=S.examDate;
+  sd.onchange=()=>{ S.startDate=sd.value; persist(); render(); };
+  ed.onchange=()=>{ S.examDate=ed.value; persist(); render(); };
+}
+applyTheme(); loadLocal(); initDates(); render();
+</script>
+<noscript><p style="padding:24px;font-family:sans-serif">Diese Seite braucht JavaScript, um Ihren Lernplan und Fortschritt anzuzeigen.</p></noscript>
+</body>
+</html>
